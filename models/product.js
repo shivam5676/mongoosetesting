@@ -14,6 +14,11 @@ const productSchema = new Schema({
     type: String,
     required: true,
   },
+  userID:{
+    type:Schema.Types.ObjectId,
+    ref:"users",
+    required:true
+  }//relation with "users models"
 });
 module.exports=mongoose.model("Product",productSchema);
 
